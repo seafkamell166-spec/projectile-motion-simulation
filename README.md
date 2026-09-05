@@ -55,3 +55,7 @@ See `outputs/trajectory_comparison.png` and `outputs/energy_conservation.png`, g
 - Working with the same physical model in two different languages and comparing a numerical approach to a closed-form one
 - Generating custom data visualizations from scratch with Pillow, without relying on matplotlib
 - Structuring a small simulation project around a reusable `Trajectory` data type (Python `dataclass`)
+
+## Known Limitations
+- The Python simulation uses simple Euler integration, so its numerical results are very close to — but not perfectly identical to — the C++ version's exact analytical values (a smaller `TIME_STEP` would narrow this further at the cost of runtime).
+- Air resistance is not modeled; both versions assume idealized motion under constant gravity only.
